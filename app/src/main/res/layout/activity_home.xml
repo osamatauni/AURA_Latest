@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/menu"
+    tools:context="com.example.fine.auraui.HomeActivity">
+
+
+    <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:weightSum="1"
+            android:visibility="visible"
+            android:soundEffectsEnabled="true"
+            android:focusableInTouchMode="false"
+            android:focusable="false">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:id="@+id/imageView2"
+                android:src="@drawable/widget"
+                android:layout_height="120dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="13dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="false"
+                android:layout_gravity="center"
+                android:layout_weight="0.07">
+            </ImageView>
+
+            <TextView
+            android:text="Welcome!\nI am AURA and I am your personal assistant.\n\n\nWe have to set some\nthings up first. So, Let's get started..."
+            android:layout_width="wrap_content"
+            android:layout_height="205dp"
+            android:id="@+id/textView"
+            android:fontFamily="sans-serif"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_below="@+id/imageView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp"
+                android:layout_weight="0.88" />
+
+            <ImageView
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            app:srcCompat="@drawable/settings"
+            android:id="@+id/imageView"
+            android:scaleType="fitXY"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/arrow"
+                android:id="@+id/image_next"
+                android:scaleType="fitXY"
+                android:layout_gravity="right"
+                android:clickable="true"
+                android:foregroundGravity="fill"
+                android:layout_weight="0.11" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:weightSum="1"
+            android:layout_weight="0.06">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="71dp"
+                app:srcCompat="@drawable/widget"
+                android:id="@+id/imageView6"
+                android:layout_gravity="left" />
+
+            <TextView
+                android:text="Choose Display Style"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:id="@+id/textView5"
+                android:textSize="26sp"
+                android:textColor="@android:color/background_light"
+                android:textAlignment="center"
+                android:foregroundGravity="center"
+                android:layout_gravity="center"
+                android:lineSpacingExtra="12sp"
+                android:typeface="sans"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <TextView
+            android:text="\n\nChoose the display access style, so I\ncan personalize your home-screen\naccording to your criteria."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            android:layout_weight="0.08"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif"
+            android:textColor="@android:color/background_light" />
+
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/arrow"
+            android:id="@+id/image_next2"
+            android:scaleType="fitXY"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:foregroundGravity="fill"
+            android:layout_weight="0.11" />
+    </LinearLayout>
+
+    <LinearLayout
+    android:id="@+id/linearLayout4"
+        android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1"
+    android:visibility="gone"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:weightSum="1"
+        android:layout_weight="0.06">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="71dp"
+            app:srcCompat="@drawable/widget"
+            android:id="@+id/imageView7"
+            android:layout_gravity="left" />
+
+        <TextView
+            android:text="Set Backup Pattern"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:id="@+id/textView6"
+            android:textSize="26sp"
+            android:textColor="@android:color/background_light"
+            android:textAlignment="center"
+            android:foregroundGravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="12sp"
+            android:typeface="sans"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/arrow"
+        android:id="@+id/image_next3"
+        android:scaleType="fitXY"
+        android:layout_gravity="right"
+        android:clickable="true"
+        android:foregroundGravity="fill"
+        android:layout_weight="0.11" />
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:weightSum="1"
+            android:layout_weight="0.07">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="71dp"
+                app:srcCompat="@drawable/widget"
+                android:id="@+id/imageView8"
+                android:layout_gravity="left" />
+
+            <TextView
+                android:text="Finalizing Setup"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:id="@+id/textView7"
+                android:textSize="26sp"
+                android:textColor="@android:color/background_light"
+                android:textAlignment="center"
+                android:foregroundGravity="center"
+                android:layout_gravity="center"
+                android:lineSpacingExtra="12sp"
+                android:typeface="sans"
+                android:gravity="center"
+                android:layout_weight="0.39" />
+        </LinearLayout>
+
+        <TextView
+            android:text="\n\nMake sure GPS and Wifi/Mobile Data\nare turned on."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10"
+            android:layout_weight="0.08"
+            android:textSize="19sp"
+            android:textAlignment="center"
+            android:typeface="sans"
+            android:textColor="@android:color/background_light" />
+
+        <ImageView
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/wifigps"
+            android:id="@+id/imageView14"
+            android:scaleType="fitStart"
+            android:layout_gravity="center"
+            android:layout_weight="0.81" />
+
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/arrow"
+            android:id="@+id/image_next4"
+            android:scaleType="fitXY"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:foregroundGravity="fill"
+            android:layout_weight="0.04" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:weightSum="1"
+            android:layout_weight="0.06">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/widget"
+                android:id="@+id/imageView5"
+                android:layout_gravity="left" />
+
+            <TextView
+                android:text="Setting Your Profile"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:id="@+id/textView4"
+                android:textSize="26sp"
+                android:textColor="@android:color/background_light"
+                android:textAlignment="center"
+                android:foregroundGravity="center"
+                android:layout_gravity="center"
+                android:lineSpacingExtra="12sp"
+                android:typeface="sans"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            app:srcCompat="@drawable/widget"
+            android:id="@+id/imageView9"
+            android:layout_weight="0.16" />
+
+        <Button
+            android:id="@+id/button_img"
+            android:text="Choose Image"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:layout_weight="0.08" />
+
+        <EditText
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:layout_gravity="center"
+            android:autoText="false"
+            android:soundEffectsEnabled="false" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:weightSum="1">
+
+            <TextView
+                android:text="Gender:"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/textView8"
+                android:layout_weight="0.42"
+                android:layout_gravity="center"
+                android:textColor="?attr/colorBackgroundFloating"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <RadioButton
+                android:text="RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/radioButton3"
+                android:layout_gravity="center"
+                android:shadowColor="@android:color/background_light"
+                android:shadowRadius="10"
+                android:soundEffectsEnabled="true"
+                android:layout_weight="0.00" />
+
+            <RadioButton
+                android:text="RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/radioButton4"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/arrow"
+            android:id="@+id/image_next1"
+            android:scaleType="fitXY"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:foregroundGravity="fill"
+            android:layout_weight="0.11" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout6"
+        android:visibility="gone"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:weightSum="1"
+            android:layout_weight="0.06">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="71dp"
+                app:srcCompat="@drawable/widget"
+                android:id="@+id/imageView10"
+                android:layout_gravity="left" />
+
+            <TextView
+                android:text="Traffic + Server"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:id="@+id/textView11"
+                android:textSize="26sp"
+                android:textColor="@android:color/background_light"
+                android:textAlignment="center"
+                android:foregroundGravity="center"
+                android:layout_gravity="center"
+                android:lineSpacingExtra="12sp"
+                android:typeface="sans"
+                android:gravity="center"
+                android:layout_weight="0.58" />
+        </LinearLayout>
+
+        <Button
+            android:text="Traffic"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_traffic"
+            android:layout_gravity="center" />
+
+        <Button
+            android:text="Upload To Server"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_server"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</RelativeLayout>
