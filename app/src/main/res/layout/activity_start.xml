@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_start"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/start2_1"
+    tools:context="com.example.fine.auraui.StartActivity"
+    android:gravity="fill"
+    android:layout_width="match_parent">
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Flipper1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:id="@+id/Layout_Icon_container"
+            android:visibility="visible"
+            android:weightSum="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="78dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Hello, What would you like to do?"
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:id="@+id/textView12"
+                android:textStyle="normal|bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:textAlignment="gravity"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/Layout_FirstRow">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="176dp"
+                    android:layout_height="134dp"
+                    android:id="@+id/Layout_MyProfile">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="113dp"
+                        app:srcCompat="@drawable/icon_profile"
+                        android:id="@+id/imageButton_profile"
+                        android:backgroundTint="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:text="My Profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:id="@+id/textView_profile"
+                        android:elevation="1dp"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="@android:color/background_dark"
+                        android:textAlignment="center"
+                        android:layout_alignBottom="@+id/imageButton_profile"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/Layout_Cloud">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="108dp"
+                        app:srcCompat="@drawable/icon_cloud"
+                        android:id="@+id/imageButton_cloud"
+                        android:backgroundTint="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="Upload Log"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:id="@+id/textView_Upload"
+                        android:elevation="1dp"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="@android:color/background_dark"
+                        android:textAlignment="center"
+                        android:layout_alignBottom="@+id/imageButton_cloud"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="146dp"
+                android:id="@+id/Layout_SecondRow">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="176dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/Layout_Apps">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="108dp"
+                        app:srcCompat="@drawable/icon_apps"
+                        android:id="@+id/imageButton_Apps"
+                        android:backgroundTint="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:text="App Suggestions"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:id="@+id/textView_Apps"
+                        android:elevation="1dp"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="@android:color/background_dark"
+                        android:textAlignment="center"
+                        android:layout_alignBottom="@+id/imageButton_Apps"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/Layout_Traffic">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="108dp"
+                        app:srcCompat="@drawable/icon_traffic"
+                        android:id="@+id/imageButton_Traffic"
+                        android:backgroundTint="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:text="View Traffic"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:id="@+id/textView_Traffic"
+                        android:elevation="1dp"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="@android:color/background_dark"
+                        android:textAlignment="center"
+                        android:layout_alignBottom="@+id/imageButton_Traffic"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="62dp"
+            android:id="@+id/Layout_App_Suggestions"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="71dp">
+
+                <ImageButton
+                    android:layout_width="54dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/backbtn"
+                    android:id="@+id/imageButton_back2icons"
+                    android:scaleType="fitCenter"
+                    android:backgroundTint="@android:color/transparent" />
+
+                <TextView
+                    android:text="App Suggestions:"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView14"
+                    android:textSize="24sp"
+                    android:textStyle="normal|bold"
+                    android:textAlignment="gravity"
+                    android:textColor="@android:color/background_dark"
+                    android:gravity="center|start" />
+            </LinearLayout>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="382dp"
+                android:id="@+id/Apps_list"
+                android:backgroundTint="?android:attr/colorControlHighlight" />
+
+        </LinearLayout>
+
+    </ViewFlipper>
+
+
+</RelativeLayout>

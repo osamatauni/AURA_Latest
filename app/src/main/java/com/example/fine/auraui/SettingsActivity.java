@@ -11,7 +11,6 @@ import android.graphics.BitmapFactory;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
@@ -25,24 +24,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.jsoup.Connection;
-import org.jsoup.Jsoup;
-
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileDescriptor;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 
 
-public class HomeActivity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
     Context context;
     int SELECT_PICTURE = 1;
 
@@ -59,7 +52,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_settings);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         context = this.getApplication();
 
@@ -187,20 +180,20 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        //Button to upload file on server
+        /*Button to upload file on server
         Button upload = (Button) findViewById(R.id.button_server);
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                final String filename = "test.txt";
+               final String filename = "test.txt";
                 new uploadTask().execute(filename);
 
             }
-        });
+        });*/
     }
 
-    private class uploadTask extends AsyncTask<String, Void, Void> {
+    /*private class uploadTask extends AsyncTask<String, Void, Void> {
 
         @Override
         protected Void doInBackground(String... strings) {
@@ -222,13 +215,11 @@ public class HomeActivity extends AppCompatActivity {
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
-
-
+            
             FileOutputStream fos = new FileOutputStream(file);
             fos.write(buffer);
             fos.close();
         } catch (Exception e) { throw new RuntimeException(e); }
-
 
         Connection.Response response;
         try {
@@ -244,7 +235,7 @@ public class HomeActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }//end file upload function
+    }//end file upload function*/
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -417,7 +408,7 @@ public class HomeActivity extends AppCompatActivity {
                                     +uploadFileName;
 
                             messageText.setText(msg);
-                            Toast.makeText(HomeActivity.this, "File Upload Complete.",
+                            Toast.makeText(SettingsActivity.this, "File Upload Complete.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     });
@@ -440,7 +431,7 @@ public class HomeActivity extends AppCompatActivity {
                     public void run()
                     {
                         messageText.setText("MalformedURLException Exception : check script url.");
-                        Toast.makeText(HomeActivity.this, "MalformedURLException", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SettingsActivity.this, "MalformedURLException", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -457,7 +448,7 @@ public class HomeActivity extends AppCompatActivity {
                     public void run()
                     {
                         messageText.setText("Got Exception : see logcat ");
-                        Toast.makeText(HomeActivity.this, "Got Exception : see logcat ",
+                        Toast.makeText(SettingsActivity.this, "Got Exception : see logcat ",
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
