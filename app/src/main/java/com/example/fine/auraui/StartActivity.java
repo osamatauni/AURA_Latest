@@ -53,13 +53,15 @@ public class StartActivity extends AppCompatActivity {
         startActivityForResult(accessUsageSetting, 1);
 
         final ViewFlipper flipper = (ViewFlipper) findViewById(R.id.Flipper1);
-        final ListView listView= (ListView) findViewById(R.id.Apps_list);
+        final ListView listView_Apps= (ListView) findViewById(R.id.Apps_list);
+        final ListView listView_Interests= (ListView) findViewById(R.id.Interests_list);
 
         ImageButton appsPanel = (ImageButton) findViewById(R.id.imageButton_Apps);
         appsPanel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                ReadCSVUpload(listView);
-                flipper.showNext();
+                ReadCSV("Log_Dataset.csv",listView_Apps);
+                flipper.setDisplayedChild(flipper.indexOfChild(findViewById(R.id.Layout_App_Suggestions)));
+
             }
 
         });
@@ -67,7 +69,7 @@ public class StartActivity extends AppCompatActivity {
         ImageButton BacktoIcons = (ImageButton) findViewById(R.id.imageButton_back2icons);
         BacktoIcons.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                flipper.showPrevious();
+                flipper.setDisplayedChild(flipper.indexOfChild(findViewById(R.id.Layout_Icon_container)));
             }
 
         });
@@ -122,10 +124,29 @@ public class StartActivity extends AppCompatActivity {
 
         //Button for safePlace check
         ImageButton chkSafePlace = (ImageButton) findViewById(R.id.imageButton_Places);
-        upload.setOnClickListener(new View.OnClickListener() {
+        chkSafePlace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+
+            }
+        });
+
+        ImageButton Back2Icons = (ImageButton) findViewById(R.id.imageButton1_back2icons);
+        Back2Icons.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                flipper.setDisplayedChild(flipper.indexOfChild(findViewById(R.id.Layout_Icon_container)));
+            }
+
+        });
+
+        //Button for Interests
+        ImageButton interests = (ImageButton) findViewById(R.id.imageButton_Interests);
+        interests.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ReadCSV("Interests.csv",listView_Interests);
+                 flipper.setDisplayedChild(flipper.indexOfChild(findViewById(R.id.Layout_Interests_Crawled)));
 
             }
         });
@@ -247,14 +268,14 @@ public class StartActivity extends AppCompatActivity {
         }
     }//end openlocdetails
 
-    private void ReadCSVUpload(ListView lv)
+    private void ReadCSV(String filename, ListView lv)
     {
-        File file = new File(getCacheDir() + "/FreeTimes.csv");
+        File file = new File(getCacheDir() + "/"+filename);
         if (!file.exists())
         {
             try
             {
-                InputStream is = getAssets().open("Log_Dataset.csv");
+                InputStream is = getAssets().open(filename);
                 BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
                 String line;
                 ArrayList<String> lines = new ArrayList<String>();
@@ -270,7 +291,8 @@ public class StartActivity extends AppCompatActivity {
                 throw new RuntimeException(e);
             }//end catch
         }//end if
-    }//end ReadCSVUpload
+
+    }//end ReadCSV
 
 
     ///insert code here.........Hussain

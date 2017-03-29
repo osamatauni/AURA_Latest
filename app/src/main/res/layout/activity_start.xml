@@ -191,7 +191,7 @@
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="match_parent"
+                    android:layout_width="175dp"
                     android:layout_height="match_parent"
                     android:id="@+id/Layout_Places"
                     android:weightSum="1">
@@ -217,6 +217,36 @@
                         android:textColor="@android:color/background_dark"
                         android:textAlignment="center"
                         android:layout_alignBottom="@+id/imageButton_Places" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/Layout_Interests"
+                    android:weightSum="1">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="97dp"
+                        app:srcCompat="@drawable/icon_interests"
+                        android:id="@+id/imageButton_Interests"
+                        android:backgroundTint="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:text="Interests"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:id="@+id/textView_Interests"
+                        android:elevation="1dp"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="@android:color/background_dark"
+                        android:textAlignment="center"
+                        android:layout_alignBottom="@+id/imageButton_Interests" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -264,6 +294,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="382dp"
                 android:id="@+id/Apps_list"
+                android:backgroundTint="?android:attr/colorControlHighlight" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="62dp"
+            android:id="@+id/Layout_Interests_Crawled"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="71dp">
+
+                <ImageButton
+                    android:layout_width="54dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/backbtn"
+                    android:id="@+id/imageButton1_back2icons"
+                    android:scaleType="fitCenter"
+                    android:backgroundTint="@android:color/transparent" />
+
+                <TextView
+                    android:text="Interest Links:"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView15"
+                    android:textSize="24sp"
+                    android:textStyle="normal|bold"
+                    android:textAlignment="gravity"
+                    android:textColor="@android:color/background_dark"
+                    android:gravity="center|start" />
+            </LinearLayout>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="382dp"
+                android:id="@+id/Interests_list"
                 android:backgroundTint="?android:attr/colorControlHighlight" />
 
         </LinearLayout>

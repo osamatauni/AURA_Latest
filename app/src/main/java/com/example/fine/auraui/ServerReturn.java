@@ -53,7 +53,7 @@ public class ServerReturn extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                Log.i("Dowload", response);
+                Log.i("Download", response);
                 return null;
             }
         }.execute();
