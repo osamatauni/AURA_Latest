@@ -44,7 +44,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Aiwin"></activity>
+        <activity android:name=".ServerReturn"></activity>
     </application>
 
 </manifest>

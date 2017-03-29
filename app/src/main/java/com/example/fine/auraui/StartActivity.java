@@ -120,6 +120,15 @@ public class StartActivity extends AppCompatActivity {
             openlocdetailsButton();
         }//end else
 
+        //Button for safePlace check
+        ImageButton chkSafePlace = (ImageButton) findViewById(R.id.imageButton_Places);
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }
+        });
     }
 
     @Override
@@ -263,6 +272,33 @@ public class StartActivity extends AppCompatActivity {
         }//end if
     }//end ReadCSVUpload
 
+
+    ///insert code here.........Hussain
+    private class SafePlaces extends AsyncTask<Void, Void, Void> {
+        ProgressDialog pd;
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            pd = new ProgressDialog(StartActivity.this);
+            pd.setTitle("Determining Safety");
+            pd.setMessage("Please wait...");
+            pd.setCancelable(true);
+            pd.setIndeterminate(true);
+            pd.show();
+        }
+
+        @Override
+        protected Void doInBackground(Void... args){
+            //inseet code here....
+            return null;
+        }
+        @Override
+        protected void onPostExecute(Void result) {
+
+            pd.dismiss();
+        }
+    }//end FindSafePlaces
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

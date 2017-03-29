@@ -12,7 +12,7 @@ import org.jsoup.Jsoup;
 
 import java.io.IOException;
 
-public class Aiwin extends AppCompatActivity {
+public class ServerReturn extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
