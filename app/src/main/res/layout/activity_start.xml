@@ -22,231 +22,233 @@
         android:layout_alignParentStart="true">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
             android:id="@+id/Layout_Icon_container"
-            android:visibility="visible"
-            android:weightSum="1"
-            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_marginTop="78dp"
-            android:layout_height="wrap_content">
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="1">
 
             <TextView
-                android:text="Hello, What would you like to do?"
-                android:layout_width="match_parent"
-                android:layout_height="93dp"
                 android:id="@+id/textView12"
-                android:textStyle="normal|bold"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:gravity="center"
+                android:text="Hello, What would you like to do?"
                 android:textAlignment="gravity"
-                android:gravity="center" />
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="normal|bold" />
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/Layout_FirstRow"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:id="@+id/Layout_FirstRow">
+                android:orientation="horizontal">
 
                 <LinearLayout
-                    android:orientation="vertical"
+                    android:id="@+id/Layout_MyProfile"
                     android:layout_width="176dp"
                     android:layout_height="134dp"
-                    android:id="@+id/Layout_MyProfile"
+                    android:orientation="vertical"
                     android:weightSum="1">
 
                     <ImageButton
+                        android:id="@+id/imageButton_profile"
                         android:layout_width="match_parent"
                         android:layout_height="92dp"
-                        app:srcCompat="@drawable/icon_profile"
-                        android:id="@+id/imageButton_profile"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.75"
                         android:backgroundTint="@android:color/transparent"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:layout_weight="0.75" />
+                        app:srcCompat="@drawable/icon_profile" />
 
                     <TextView
-                        android:text="My Profile"
+                        android:id="@+id/textView_profile"
                         android:layout_width="match_parent"
                         android:layout_height="36dp"
-                        android:id="@+id/textView_profile"
-                        android:elevation="1dp"
-                        android:layout_gravity="center"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold"
-                        android:textColor="@android:color/background_dark"
-                        android:textAlignment="center"
                         android:layout_alignBottom="@+id/imageButton_profile"
-                        android:layout_weight="1.75" />
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:elevation="1dp"
+                        android:text="My Profile"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="vertical"
+                    android:id="@+id/Layout_Cloud"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/Layout_Cloud">
+                    android:orientation="vertical">
 
                     <ImageButton
+                        android:id="@+id/imageButton_cloud"
                         android:layout_width="match_parent"
                         android:layout_height="108dp"
-                        app:srcCompat="@drawable/icon_cloud"
-                        android:id="@+id/imageButton_cloud"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
                         android:backgroundTint="@android:color/transparent"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:layout_weight="1" />
+                        app:srcCompat="@drawable/icon_cloud" />
 
                     <TextView
-                        android:text="Upload Log"
+                        android:id="@+id/textView_Upload"
                         android:layout_width="match_parent"
                         android:layout_height="32dp"
-                        android:id="@+id/textView_Upload"
-                        android:elevation="1dp"
-                        android:layout_gravity="center"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold"
-                        android:textColor="@android:color/background_dark"
-                        android:textAlignment="center"
                         android:layout_alignBottom="@+id/imageButton_cloud"
-                        android:layout_weight="1" />
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:elevation="1dp"
+                        android:text="Upload Log"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold" />
                 </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/Layout_SecondRow"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/Layout_SecondRow">
+                android:orientation="horizontal">
 
                 <LinearLayout
-                    android:orientation="vertical"
+                    android:id="@+id/Layout_Apps"
                     android:layout_width="176dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/Layout_Apps"
+                    android:orientation="vertical"
                     android:weightSum="1">
 
                     <ImageButton
+                        android:id="@+id/imageButton_Apps"
                         android:layout_width="match_parent"
                         android:layout_height="92dp"
-                        app:srcCompat="@drawable/icon_apps"
-                        android:id="@+id/imageButton_Apps"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
                         android:backgroundTint="@android:color/transparent"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:layout_weight="1" />
+                        app:srcCompat="@drawable/icon_apps" />
 
                     <TextView
-                        android:text="App Suggestions"
+                        android:id="@+id/textView_Apps"
                         android:layout_width="match_parent"
                         android:layout_height="32dp"
-                        android:id="@+id/textView_Apps"
-                        android:elevation="1dp"
+                        android:layout_alignBottom="@+id/imageButton_Apps"
                         android:layout_gravity="center"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold"
-                        android:textColor="@android:color/background_dark"
+                        android:elevation="1dp"
+                        android:text="App Suggestions"
                         android:textAlignment="center"
-                        android:layout_alignBottom="@+id/imageButton_Apps" />
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="vertical"
+                    android:id="@+id/Layout_Traffic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/Layout_Traffic">
+                    android:orientation="vertical">
 
                     <ImageButton
+                        android:id="@+id/imageButton_Traffic"
                         android:layout_width="match_parent"
                         android:layout_height="97dp"
-                        app:srcCompat="@drawable/icon_traffic"
-                        android:id="@+id/imageButton_Traffic"
+                        android:layout_gravity="center"
                         android:backgroundTint="@android:color/transparent"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center" />
+                        app:srcCompat="@drawable/icon_traffic" />
 
                     <TextView
-                        android:text="View Traffic"
+                        android:id="@+id/textView_Traffic"
                         android:layout_width="match_parent"
                         android:layout_height="32dp"
-                        android:id="@+id/textView_Traffic"
-                        android:elevation="1dp"
+                        android:layout_alignBottom="@+id/imageButton_Traffic"
                         android:layout_gravity="center"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold"
-                        android:textColor="@android:color/background_dark"
+                        android:elevation="1dp"
+                        android:text="View Traffic"
                         android:textAlignment="center"
-                        android:layout_alignBottom="@+id/imageButton_Traffic" />
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold" />
                 </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/Layout_Thirdrow"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/Layout_Thirdrow">
+                android:orientation="horizontal">
 
                 <LinearLayout
-                    android:orientation="vertical"
+                    android:id="@+id/Layout_Places"
                     android:layout_width="175dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/Layout_Places"
+                    android:orientation="vertical"
                     android:weightSum="1">
 
                     <ImageButton
+                        android:id="@+id/imageButton_Places"
                         android:layout_width="match_parent"
                         android:layout_height="97dp"
-                        app:srcCompat="@drawable/icon_places"
-                        android:id="@+id/imageButton_Places"
+                        android:layout_gravity="center"
                         android:backgroundTint="@android:color/transparent"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center" />
+                        app:srcCompat="@drawable/icon_interests" />
 
                     <TextView
-                        android:text="Safe Places"
+                        android:id="@+id/textView_Places"
                         android:layout_width="match_parent"
                         android:layout_height="32dp"
-                        android:id="@+id/textView_Places"
-                        android:elevation="1dp"
+                        android:layout_alignBottom="@+id/imageButton_Places"
                         android:layout_gravity="center"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold"
-                        android:textColor="@android:color/background_dark"
+                        android:elevation="1dp"
+                        android:text="Expenses"
                         android:textAlignment="center"
-                        android:layout_alignBottom="@+id/imageButton_Places" />
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="vertical"
+                    android:id="@+id/Layout_Interests"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/Layout_Interests"
+                    android:orientation="vertical"
                     android:weightSum="1">
 
                     <ImageButton
+                        android:id="@+id/imageButton_Interests"
                         android:layout_width="match_parent"
                         android:layout_height="97dp"
-                        app:srcCompat="@drawable/icon_interests"
-                        android:id="@+id/imageButton_Interests"
+                        android:layout_gravity="center"
                         android:backgroundTint="@android:color/transparent"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center" />
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/icon_places" />
 
                     <TextView
-                        android:text="Interests"
+                        android:id="@+id/textView_Interests"
                         android:layout_width="match_parent"
                         android:layout_height="32dp"
-                        android:id="@+id/textView_Interests"
-                        android:elevation="1dp"
+                        android:layout_alignBottom="@+id/imageButton_Interests"
                         android:layout_gravity="center"
+                        android:elevation="1dp"
+                        android:text="Safe Place?"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_dark"
                         android:textSize="18sp"
                         android:textStyle="normal|bold"
-                        android:textColor="@android:color/background_dark"
-                        android:textAlignment="center"
-                        android:layout_alignBottom="@+id/imageButton_Interests" />
+                        android:visibility="visible" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -254,47 +256,160 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
+            android:id="@+id/Layout_App_Suggestions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_marginTop="62dp"
-            android:id="@+id/Layout_App_Suggestions"
+            android:orientation="vertical"
             android:visibility="gone">
 
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="71dp">
+                android:layout_height="71dp"
+                android:orientation="horizontal">
 
                 <ImageButton
+                    android:id="@+id/imageButton_back2icons"
                     android:layout_width="54dp"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/backbtn"
-                    android:id="@+id/imageButton_back2icons"
+                    android:backgroundTint="@android:color/transparent"
                     android:scaleType="fitCenter"
-                    android:backgroundTint="@android:color/transparent" />
+                    app:srcCompat="@drawable/backbtn" />
 
                 <TextView
-                    android:text="App Suggestions:"
+                    android:id="@+id/textView14"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/textView14"
-                    android:textSize="24sp"
-                    android:textStyle="normal|bold"
+                    android:gravity="center|start"
+                    android:text="App Suggestions:"
                     android:textAlignment="gravity"
                     android:textColor="@android:color/background_dark"
-                    android:gravity="center|start" />
+                    android:textSize="24sp"
+                    android:textStyle="normal|bold" />
             </LinearLayout>
 
             <ListView
+                android:id="@+id/Apps_list"
                 android:layout_width="match_parent"
                 android:layout_height="382dp"
-                android:id="@+id/Apps_list"
                 android:backgroundTint="?android:attr/colorControlHighlight" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Layout_User_Profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="62dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton_back3icons"
+                    android:layout_width="54dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/backbtn" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="User Details:"
+                    android:textAlignment="gravity"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp"
+                    android:textStyle="normal|bold" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                app:srcCompat="@drawable/user_dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:orientation="horizontal"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_Name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="right|center"
+                    android:text="Name:  "
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_Name_from_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="left|center"
+                    android:text="---"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:orientation="horizontal"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_Gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_Gender1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="right|center"
+                    android:text="Gender:  "
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_Gender_from_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="left|center"
+                    android:text="---"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -342,6 +457,69 @@
                 android:backgroundTint="?android:attr/colorControlHighlight" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="62dp"
+            android:id="@+id/Layout_Expenses"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="71dp">
+
+                <ImageButton
+                    android:id="@+id/imageButton2_back4icons"
+                    android:layout_width="54dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/backbtn" />
+
+                <TextView
+                    android:text="Your Expense Summary:"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView17"
+                    android:textSize="24sp"
+                    android:textStyle="normal|bold"
+                    android:textAlignment="gravity"
+                    android:textColor="@android:color/background_dark"
+                    android:gravity="center|start" />
+
+            </LinearLayout>
+
+
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/expChart"
+                android:layout_width="330dp"
+                android:layout_height="330dp"
+                android:layout_gravity="center"></com.github.mikephil.charting.charts.PieChart>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:orientation="horizontal"></LinearLayout>
+            <TextView
+                android:text="Expense Result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textViewFinalExpRes"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/background_dark"
+                android:gravity="center" />
+        </LinearLayout>
+
+
 
     </ViewFlipper>
 
