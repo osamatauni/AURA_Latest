@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Your total expense here?"
+        android:id="@+id/textView_expense"/>
+    <EditText
+        android:id="@+id/editText_Expense"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Amount Here..."
+        android:padding="10dp"/>
+
+</LinearLayout>
